@@ -1,0 +1,16 @@
+F:\CW expert\bin\Debug\CWExpert.exe.config
+F:\CW expert\obj\Debug\ResolveAssemblyReference.cache
+F:\CW expert\obj\Debug\CWExpert.ClusterSetup.resources
+F:\CW expert\obj\Debug\CWExpert.DXCC.resources
+F:\CW expert\obj\Debug\CWExpert.RecorderSetup.resources
+F:\CW expert\obj\Debug\CWExpert.Recorder.resources
+F:\CW expert\obj\Debug\CWExpert.KeyboardSetup.resources
+F:\CW expert\obj\Debug\CWExpert.CWExpert.resources
+F:\CW expert\obj\Debug\CWExpert.DXClusterClient.resources
+F:\CW expert\obj\Debug\CWExpert.Keyboard.resources
+F:\CW expert\obj\Debug\CWExpert.LOG_export.resources
+F:\CW expert\obj\Debug\CWExpert.LOG.resources
+F:\CW expert\obj\Debug\CWExpert.Properties.Resources.resources
+F:\CW expert\obj\Debug\CWExpert.Setup.resources
+F:\CW expert\obj\Debug\CWExpert.LOGStnSettings.resources
+F:\CW expert\obj\Debug\CWExpert.csproj.GenerateResource.Cache
