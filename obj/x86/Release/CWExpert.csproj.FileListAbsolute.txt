@@ -46,3 +46,27 @@ D:\Projekti\CW expert\obj\x86\Release\CWExpert.LOGStnSettings.resources
 D:\Projekti\CW expert\obj\x86\Release\CWExpert.csproj.GenerateResource.Cache
 D:\Projekti\CW expert\obj\x86\Release\CWExpert.exe.manifest
 D:\Projekti\CW expert\obj\x86\Release\CWExpert.application
+D:\Projekti\CW-expert\bin\Release\CWExpert.exe.config
+D:\Projekti\CW-expert\obj\x86\Release\CWExpert.exe
+D:\Projekti\CW-expert\obj\x86\Release\CWExpert.pdb
+D:\Projekti\CW-expert\bin\Release\CWExpert.exe.manifest
+D:\Projekti\CW-expert\bin\Release\CWExpert.application
+D:\Projekti\CW-expert\bin\Release\CWExpert.exe
+D:\Projekti\CW-expert\bin\Release\CWExpert.pdb
+D:\Projekti\CW-expert\obj\x86\Release\ResolveAssemblyReference.cache
+D:\Projekti\CW-expert\obj\x86\Release\CWExpert.ClusterSetup.resources
+D:\Projekti\CW-expert\obj\x86\Release\CWExpert.DXCC.resources
+D:\Projekti\CW-expert\obj\x86\Release\CWExpert.RecorderSetup.resources
+D:\Projekti\CW-expert\obj\x86\Release\CWExpert.Recorder.resources
+D:\Projekti\CW-expert\obj\x86\Release\CWExpert.KeyboardSetup.resources
+D:\Projekti\CW-expert\obj\x86\Release\CWExpert.CWExpert.resources
+D:\Projekti\CW-expert\obj\x86\Release\CWExpert.DXClusterClient.resources
+D:\Projekti\CW-expert\obj\x86\Release\CWExpert.Keyboard.resources
+D:\Projekti\CW-expert\obj\x86\Release\CWExpert.LOG_export.resources
+D:\Projekti\CW-expert\obj\x86\Release\CWExpert.LOG.resources
+D:\Projekti\CW-expert\obj\x86\Release\CWExpert.Properties.Resources.resources
+D:\Projekti\CW-expert\obj\x86\Release\CWExpert.Setup.resources
+D:\Projekti\CW-expert\obj\x86\Release\CWExpert.LOGStnSettings.resources
+D:\Projekti\CW-expert\obj\x86\Release\CWExpert.csproj.GenerateResource.Cache
+D:\Projekti\CW-expert\obj\x86\Release\CWExpert.exe.manifest
+D:\Projekti\CW-expert\obj\x86\Release\CWExpert.application

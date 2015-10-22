@@ -1179,7 +1179,7 @@ namespace CWExpert
                 return call;
             }
 
-            return call;
+            //return call;
         }
 
         public void Init(string loc)

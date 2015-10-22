@@ -110,6 +110,7 @@ namespace CWExpert
             this.rtbDXClusterText.Size = new System.Drawing.Size(510, 328);
             this.rtbDXClusterText.TabIndex = 3;
             this.rtbDXClusterText.Text = "";
+            this.rtbDXClusterText.SelectionChanged += new System.EventHandler(this.rtbDXClusterText_SelectionChanged);
             this.rtbDXClusterText.LinkClicked += new System.Windows.Forms.LinkClickedEventHandler(this.rtbDXClusterText_LinkClicked);
             // 
             // btnShowDX

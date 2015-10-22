@@ -46,3 +46,27 @@ D:\Projekti\CW expert\obj\x86\Debug\CWExpert.LOGStnSettings.resources
 D:\Projekti\CW expert\obj\x86\Debug\CWExpert.csproj.GenerateResource.Cache
 D:\Projekti\CW expert\obj\x86\Debug\CWExpert.exe.manifest
 D:\Projekti\CW expert\obj\x86\Debug\CWExpert.application
+D:\Projekti\CW-expert\bin\Debug\CWExpert.exe.config
+D:\Projekti\CW-expert\obj\x86\Debug\CWExpert.exe
+D:\Projekti\CW-expert\obj\x86\Debug\CWExpert.pdb
+D:\Projekti\CW-expert\bin\Debug\CWExpert.exe.manifest
+D:\Projekti\CW-expert\bin\Debug\CWExpert.application
+D:\Projekti\CW-expert\bin\Debug\CWExpert.exe
+D:\Projekti\CW-expert\bin\Debug\CWExpert.pdb
+D:\Projekti\CW-expert\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\Projekti\CW-expert\obj\x86\Debug\CWExpert.ClusterSetup.resources
+D:\Projekti\CW-expert\obj\x86\Debug\CWExpert.DXCC.resources
+D:\Projekti\CW-expert\obj\x86\Debug\CWExpert.RecorderSetup.resources
+D:\Projekti\CW-expert\obj\x86\Debug\CWExpert.Recorder.resources
+D:\Projekti\CW-expert\obj\x86\Debug\CWExpert.KeyboardSetup.resources
+D:\Projekti\CW-expert\obj\x86\Debug\CWExpert.CWExpert.resources
+D:\Projekti\CW-expert\obj\x86\Debug\CWExpert.DXClusterClient.resources
+D:\Projekti\CW-expert\obj\x86\Debug\CWExpert.Keyboard.resources
+D:\Projekti\CW-expert\obj\x86\Debug\CWExpert.LOG_export.resources
+D:\Projekti\CW-expert\obj\x86\Debug\CWExpert.LOG.resources
+D:\Projekti\CW-expert\obj\x86\Debug\CWExpert.Properties.Resources.resources
+D:\Projekti\CW-expert\obj\x86\Debug\CWExpert.Setup.resources
+D:\Projekti\CW-expert\obj\x86\Debug\CWExpert.LOGStnSettings.resources
+D:\Projekti\CW-expert\obj\x86\Debug\CWExpert.csproj.GenerateResource.Cache
+D:\Projekti\CW-expert\obj\x86\Debug\CWExpert.exe.manifest
+D:\Projekti\CW-expert\obj\x86\Debug\CWExpert.application

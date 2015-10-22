@@ -279,6 +279,7 @@ namespace CWExpert
             this.ch1_infoTextToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnTune = new System.Windows.Forms.Button();
             this.grpMRChannels = new System.Windows.Forms.GroupBox();
+            this.btnKeyboard = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picWaterfall)).BeginInit();
             this.picWaterfallcontextMenu.SuspendLayout();
@@ -3069,11 +3070,24 @@ namespace CWExpert
             this.grpMRChannels.Text = "MR";
             this.grpMRChannels.Visible = false;
             // 
+            // btnKeyboard
+            // 
+            this.btnKeyboard.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnKeyboard.ForeColor = System.Drawing.Color.Black;
+            this.btnKeyboard.Location = new System.Drawing.Point(141, 33);
+            this.btnKeyboard.Name = "btnKeyboard";
+            this.btnKeyboard.Size = new System.Drawing.Size(63, 23);
+            this.btnKeyboard.TabIndex = 79;
+            this.btnKeyboard.Text = "Keyboard";
+            this.btnKeyboard.UseVisualStyleBackColor = true;
+            this.btnKeyboard.Click += new System.EventHandler(this.btnKeyboard_Click);
+            // 
             // CWExpert
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(1008, 562);
+            this.Controls.Add(this.btnKeyboard);
             this.Controls.Add(this.grpMorseRunner2);
             this.Controls.Add(this.grpMorseRunner);
             this.Controls.Add(this.grpGenesisRadio);
@@ -3095,7 +3109,6 @@ namespace CWExpert
             this.MinimumSize = new System.Drawing.Size(1024, 600);
             this.Name = "CWExpert";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this.Text = "CWExpert  S56A - YT7PWR v2.2.1";
             this.MouseWheel += new System.Windows.Forms.MouseEventHandler(this.MainFormMouseWheel);
             this.Closing += new System.ComponentModel.CancelEventHandler(this.CWExpert_Closing);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.CWExpert_KeyUp);
@@ -3389,6 +3402,7 @@ namespace CWExpert
         private System.Windows.Forms.ToolStripMenuItem recorderToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem dXCCToolStripMenuItem;
+        private System.Windows.Forms.Button btnKeyboard;
     }
 }
 

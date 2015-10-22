@@ -14,3 +14,4 @@ F:\CW expert\obj\Debug\CWExpert.Properties.Resources.resources
 F:\CW expert\obj\Debug\CWExpert.Setup.resources
 F:\CW expert\obj\Debug\CWExpert.LOGStnSettings.resources
 F:\CW expert\obj\Debug\CWExpert.csproj.GenerateResource.Cache
+D:\Projekti\CW-expert\bin\Debug\CWExpert.exe.config

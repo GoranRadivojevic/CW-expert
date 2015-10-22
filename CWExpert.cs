@@ -1,7 +1,7 @@
 ﻿//=================================================================
 // CWExpert.cs
 //=================================================================
-// Copyright (C) 2011,2012 S56A YT7PWR
+// Copyright (C) 2011-2015 S56A YT7PWR
 //
 // This program is free software; you can redistribute it and/or
 // modify it under the terms of the GNU General Public License
@@ -302,6 +302,8 @@ namespace CWExpert
         #endregion
 
         #region variable definition
+
+        public string programVersion = "CWExpert S56A-YT7PWR v2.2.2";
 
         delegate void CrossThreadCallback(string command, string data);
         delegate void KeyboardThreadCommand(string command, int param_1, string param_2);
@@ -674,13 +676,60 @@ namespace CWExpert
             get { return current_band; }
             set
             {
-                current_band = value;
-                Audio.iq_balancer_reset = true;
-                SetupForm.udTXGain.Value = (decimal)tx_image_gain_table[(int)current_band];
-                SetupForm.udTXPhase.Value = (decimal)tx_image_phase_table[(int)current_band];
-                SetupForm.udRXGain.Value = (decimal)rx_image_gain_table[(int)current_band];
-                SetupForm.udRXPhase.Value = (decimal)rx_image_phase_table[(int)current_band];
-                Audio.iq_balancer_reset = true;
+                if (current_band != value)
+                {
+                    current_band = value;
+
+                    switch (value)
+                    {
+                        case Band.B10M:
+                            radBand10.Checked = true;
+                            break;
+
+                        case Band.B12M:
+                            radBand12.Checked = true;
+                            break;
+
+                        case Band.B15M:
+                            radBand15.Checked = true;
+                            break;
+
+                        case Band.B160M:
+                            radBand160.Checked = true;
+                            break;
+
+                        case Band.B17M:
+                            radBand17.Checked = true;
+                            break;
+
+                        case Band.B20M:
+                            radBand20.Checked = true;
+                            break;
+
+                        case Band.B30M:
+                            radBand30.Checked = true;
+                            break;
+
+                        case Band.B40M:
+                            radBand40.Checked = true;
+                            break;
+
+                        case Band.B6M:
+                            radBand6.Checked = true;
+                            break;
+
+                        case Band.B80M:
+                            radBand80.Checked = true;
+                            break;
+                    }
+
+                    Audio.iq_balancer_reset = true;
+                    SetupForm.udTXGain.Value = (decimal)tx_image_gain_table[(int)current_band];
+                    SetupForm.udTXPhase.Value = (decimal)tx_image_phase_table[(int)current_band];
+                    SetupForm.udRXGain.Value = (decimal)rx_image_gain_table[(int)current_band];
+                    SetupForm.udRXPhase.Value = (decimal)rx_image_phase_table[(int)current_band];
+                    Audio.iq_balancer_reset = true;
+                }
             }
         }
 
@@ -1219,6 +1268,14 @@ namespace CWExpert
             }
         }
 
+        public Band BandByFreq(double freq)     // changes yt7pwr
+        {
+            Band b = current_band;
+            DB.GetBandLimits(freq, out b);
+
+            return b;
+        }
+
         private int cw_pitch = 700;
         public int CWPitch
         {
@@ -1554,7 +1611,6 @@ namespace CWExpert
         {
             booting = true;
             InitializeComponent();
-
             float dpi = this.CreateGraphics().DpiX;
             this.AutoScaleMode = AutoScaleMode.Dpi;
             SizeF d = this.AutoScaleDimensions;
@@ -1584,6 +1640,7 @@ namespace CWExpert
                 ControlStyles.AllPaintingInWmPaint |
                 ControlStyles.OptimizedDoubleBuffer, true);
             UpdateStyles();
+            this.Text = programVersion;
             tx_image_phase_table = new float[(int)Band.LAST];
             tx_image_gain_table = new float[(int)Band.LAST];
             rx_image_phase_table = new float[(int)Band.LAST];
@@ -1600,7 +1657,7 @@ namespace CWExpert
             Display_GDI.MainForm = this;
             SetupForm = new Setup(this);
             booting = false;
-            DXClusterForm = new DXClusterClient(SetupForm.txtTelnetHostAddress.Text.ToString(),
+            DXClusterForm = new DXClusterClient(this, SetupForm.txtTelnetHostAddress.Text.ToString(),
                 SetupForm.txtStnCALL.Text.ToString(), SetupForm.txtStnName.Text.ToString(),
                 SetupForm.txtStnQTH.Text.ToString());
             SetupForm.chkIPV6_CheckedChanged(this, EventArgs.Empty);
@@ -9860,7 +9917,7 @@ namespace CWExpert
                     DXClusterForm.Show();
                 else
                 {
-                    DXClusterForm = new DXClusterClient(SetupForm.txtTelnetHostAddress.Text.ToString(),
+                    DXClusterForm = new DXClusterClient(this, SetupForm.txtTelnetHostAddress.Text.ToString(),
                         SetupForm.txtStnCALL.Text.ToString(), SetupForm.txtStnName.Text.ToString(),
                         SetupForm.txtStnQTH.Text.ToString());
                     DXClusterForm.Show();
@@ -10603,11 +10660,34 @@ namespace CWExpert
 
         private void KeyboardToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (keyboard == null || keyboard.IsDisposed)
-                keyboard = new Keyboard(this);
+            try
+            {
+                if (keyboard == null || keyboard.IsDisposed)
+                    keyboard = new Keyboard(this);
 
-            keyboard.Show();
-            keyboard.BringToFront();
+                keyboard.Show();
+                keyboard.BringToFront();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error opening Keyboard!\n" + ex.ToString());
+            }
+        }
+
+        private void btnKeyboard_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (keyboard == null || keyboard.IsDisposed)
+                    keyboard = new Keyboard(this);
+
+                keyboard.Show();
+                keyboard.BringToFront();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error opening Keyboard!\n" + ex.ToString());
+            }
         }
 
         private void setupMenuItem_Click(object sender, EventArgs e)

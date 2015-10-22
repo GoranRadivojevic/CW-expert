@@ -1,7 +1,7 @@
 ﻿//=================================================================
 // LOG Export
 //=================================================================
-// Copyright (C) 2012-2013 S56A YT7PWR
+// Copyright (C) 2012-2015 S56A YT7PWR
 //
 // This program is free software; you can redistribute it and/or
 // modify it under the terms of the GNU General Public License
@@ -195,7 +195,7 @@ namespace CWExpert
                         text += "NAME: " + MyName + "\n";
                         text += "ADDRESS: " + MyAddr1 + "\n";
                         text += "SOAPBOX: " + Remarks + "\n";
-                        text += "CREATED-BY: CWExpert v2.1.1" + "\n";
+                        text += "CREATED-BY:" + MainForm.programVersion + "\n";
                         rtbLOGPreview.AppendText(text);
 
                         for (int i = first - 1; i < last; i++)
@@ -272,7 +272,7 @@ namespace CWExpert
                         text += "ADDRESS: " + MyAddr2 + "\n";
                         text += "ADDRESS-CITY: " + MyCity + "\n";
                         text += "ADDRESS: " + MyCountry + "\n";
-                        text += "CREATED-BY: CWExpert v2.1.1" + "\n";
+                        text += "CREATED-BY:" + MainForm.programVersion + "\n";
                         rtbLOGPreview.AppendText(text);  
 
                         for (int i = first - 1; i < last; i++)

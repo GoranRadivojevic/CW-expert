@@ -23,6 +23,7 @@ namespace CWExpert
 
         #region variable
 
+        CWExpert MainWindow;
         const int WM_VSCROLL = 0x115;
         const int SB_BOTTOM = 7;
         public TelnetClient telnet_client;
@@ -40,8 +41,9 @@ namespace CWExpert
 
         #region constructor
 
-        public DXClusterClient(string host, string call, string name, string qth)
+        public DXClusterClient(CWExpert ptr, string host, string call, string name, string qth)
         {
+            MainWindow = ptr;
             this.AutoScaleMode = AutoScaleMode.Inherit;
             InitializeComponent();
             float dpi = this.CreateGraphics().DpiX;
@@ -390,6 +392,36 @@ namespace CWExpert
             try
             {
                 Process.Start(e.LinkText);
+            }
+            catch (Exception ex)
+            {
+                Debug.Write(ex.ToString());
+            }
+        }
+
+        private void rtbDXClusterText_SelectionChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                double vfoa = 0.0;
+                Band band = Band.B20M;
+
+                if (double.TryParse(rtbDXClusterText.SelectedText, out vfoa))
+                {
+                    vfoa = Math.Round(vfoa / 1e3, 6);
+                    DB.GetBandLimits(vfoa, out band);
+                    MainWindow.CurrentBand = band;
+
+                    if ((vfoa > (MainWindow.LOSC * 1e6 + Audio.SampleRate / 2) / 1e6) ||
+                    (vfoa < (MainWindow.LOSC * 1e6 - Audio.SampleRate / 2) / 1e6))
+                    {
+                        double losc = Math.Round(vfoa - 0.01, 3);
+                        MainWindow.LOSC = losc;
+                    }
+
+                    MainWindow.VFOA = Math.Round(vfoa, 6);
+                    MainWindow.VFOB = Math.Round(vfoa, 6);
+                }
             }
             catch (Exception ex)
             {
